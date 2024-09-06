@@ -1,0 +1,11 @@
+version: '3'
+services:
+  goapi:
+    container_name: goPlan
+    build: .
+    volumes:
+      - .:/go/src/go/
+    working_dir: /go/src/go
+    command: go run .
+    ports:
+    - "8080:8080"
